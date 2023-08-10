@@ -1,0 +1,36 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import { TextInput, Button } from 'react-native-paper';
+
+export default function App() {
+  return (
+    <View style={style.box}>
+      <Text>Cadastre seus dados</Text>
+      <View style={style.box}>
+        <TextInput style={style.input} type="outlined" label="Nome da empresa"/>
+        <TextInput style={style.input} type="outlined" label="Ramo"/>
+        <TextInput style={style.input} type="outlined" label="Unidade federativa"/>
+        <TextInput style={style.input} type="outlined" label="E-mail"/>
+      </View>
+      <Button style={style.button}>Cadastrar</Button>
+      <Button style={style.button}>Cancelar</Button>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const style = StyleSheet.create({
+  box: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: "100%",
+  },
+  input: {
+    width: '100%',
+  },
+  button: {
+    backgroundColor: "#6699CC",
+    color: '#fff',
+  },
+});
